@@ -3,6 +3,12 @@ from tkinter import *
 from tkinter import messagebox
 from random import randint,choice,shuffle
 import pyperclip
+
+
+BLACK = "#000016"
+YELLOW = "#f7f5dd"
+RED = "#e7305b"
+FONT_NAME = "Courier"
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -41,37 +47,37 @@ def save():
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title('Password Manager')
-window.config(padx=50,pady=50)
+window.config(padx=50,pady=50,bg=BLACK)
 
 #lets create canvas
-canvas = Canvas(height=200,width=200)
+canvas = Canvas(height=200,width=200,bg=BLACK,highlightthickness=0)
 logo_img = PhotoImage(file='logo.png')
 canvas.create_image(100,100,image=logo_img)
 canvas.grid(column=2,row=1)
 
 #website label
-website_label =  Label(text='Website:',font=('Arial',12,'normal'))
+website_label =  Label(text='Website:',font=(FONT_NAME,12,'normal'),bg=BLACK,fg='#ffffff')
 website_label.grid(column=1,row=2)
 
 #email label
-email_label = Label(text='Email:',font=('Arial',12,'normal'))
+email_label = Label(text='Email:',font=(FONT_NAME,12,'normal'),bg=BLACK,fg='#ffffff')
 email_label.grid(column=1,row=3)
 
 #password label
-password_label = Label(text='Password:',font=('Arial',12,'normal'))
+password_label = Label(text='Password:',font=(FONT_NAME,12,'normal'),bg=BLACK,fg='#ffffff')
 password_label.grid(column=1,row=4)
 
 #website entry
-website_entry = Entry(width=35)
+website_entry = Entry(width=35,highlightthickness=0,bg=YELLOW)
 website_entry.grid(column=2,row=2,columnspan=2)
 website_entry.focus()
 
 #email entry
-email_entry = Entry(width=35)
+email_entry = Entry(width=35,highlightthickness=0,bg=YELLOW)
 email_entry.insert(0,'@gmail.com')
 email_entry.grid(column=2,row=3,columnspan=2)
 #password entry
-password_entry = Entry(width=21)
+password_entry = Entry(width=21,highlightthickness=0,bg=YELLOW)
 password_entry.grid(column=2,row=4)
 
 #button to generate password
