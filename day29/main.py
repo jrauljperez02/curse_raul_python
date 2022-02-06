@@ -2,7 +2,7 @@ import imp
 from tkinter import *
 from tkinter import messagebox
 from random import randint,choice,shuffle
-import pyperclip
+#import pyperclip
 
 
 BLACK = "#000016"
@@ -24,7 +24,7 @@ def generate_password():
 
     password = ''.join(password_list)
     password_entry.insert(0, password)
-    pyperclip.copy(password)
+    #pyperclip.copy(password)
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -77,11 +77,11 @@ email_entry = Entry(width=35,highlightthickness=0,bg=YELLOW)
 email_entry.insert(0,'@gmail.com')
 email_entry.grid(column=2,row=3,columnspan=2)
 #password entry
-password_entry = Entry(width=21,highlightthickness=0,bg=YELLOW)
+password_entry = Entry(width=25,highlightthickness=0,bg=YELLOW)
 password_entry.grid(column=2,row=4)
 
 #button to generate password
-generate_password_button = Button(text='Generate Password',highlightthickness=0,width=12,command=generate_password)
+generate_password_button = Button(text='Generate Password',highlightthickness=0,width=16,command=generate_password)
 generate_password_button.grid(column=3,row=4)
 
 #add button
