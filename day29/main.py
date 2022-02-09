@@ -2,7 +2,7 @@ import imp
 from tkinter import *
 from tkinter import messagebox
 from random import randint,choice,shuffle
-#import pyperclip
+import pyperclip
 
 
 BLACK = "#000016"
@@ -24,7 +24,7 @@ def generate_password():
 
     password = ''.join(password_list)
     password_entry.insert(0, password)
-    #pyperclip.copy(password)
+    pyperclip.copy(password)
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
