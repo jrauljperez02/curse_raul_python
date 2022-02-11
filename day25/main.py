@@ -1,6 +1,6 @@
-'''with open('weather_data.csv') as data_file:
+with open('weather_data.csv') as data_file:
     data = data_file.readlines()
-print(data)'''
+print(data)
 
 '''import csv
 with open('weather_data.csv') as data_file:
@@ -19,7 +19,7 @@ import pandas
     2-dimensional
 '''
 data = pandas.read_csv('weather_data.csv')
-print(data)
+print(data) 
 
 
 #to convert the file into a dict

@@ -6,7 +6,7 @@
 from os import name
 
 
-with open('/home/jrauljperez/Desktop/PROGRAMACION/PYTHON/curse/day24/Mail Merge Project Start/Input/Names/invited_names.txt') as names:
+with open('Input/Names/invited_names.txt') as names:
     names = names.readlines()
     #print(names)
 
@@ -15,7 +15,7 @@ for person in names:
     txt = 'Dear Aang,\nYou are invited to my birthday this Saturday.\nHope you can make it!\nRaul'
     x = txt.replace('Aang',person)
     #lets save each leter into a file
-    with open(f'Mail Merge Project Start/Output/letter for {person}.txt',mode='w') as letter:
+    with open(f'Output/letter{person}.txt',mode='w') as letter:
         letter.write(x)
     
     
