@@ -1,4 +1,3 @@
-from glob import glob
 from tkinter import *
 import math
 from turtle import title
@@ -26,7 +25,6 @@ def reset_timer():
 
     global reps
     reps = 0
-
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
@@ -65,7 +63,7 @@ def count_down(count):
 
     if count > 0:
         global timmer
-        timmer = window.after(1000,count_down,count-1)
+        timmer = window.after(10,count_down,count-1)
     else:
         start_timer()
         mark = ''
