@@ -1,7 +1,7 @@
 import requests
 from time import *
 from datetime import datetime
-import pywhatkit
+import pywhatkit as pyw
 
 MY_LAT = 19.432608
 MY_LONG = -99.133209
@@ -44,4 +44,5 @@ while True:
     sleep(60)
     if is_iss_overhead() and is_night():
         
-        pywwhatkit.sendwhatmsg('+522461034307','Look above you, The ISS is above you',2,10)
+        pyw.sendwhatmsg('+522461034307','Look above you, The ISS is above you',2,10)
+
