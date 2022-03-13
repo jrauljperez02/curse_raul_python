@@ -8,8 +8,11 @@ class Score_board(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        with open('data.txt') as data:
-            self.high_score = int(data.read())
+        try:
+            with open('data.txt') as data:
+                self.high_score = int(data.read())
+        except FileNotFoundError:
+            pass
         #self.high_score = 0
         self.color('white')
         self.penup()
@@ -19,14 +22,19 @@ class Score_board(Turtle):
     
     def update_scoreboard(self):
         self.clear()
-        self.write(f"Score: {self.score} High Sore {self.high_score}",align=ALIGMENT,font=FONT)
-
-    def reset(self):
-        if self.score > self.high_score:
-            self.high_score = self.score
-            with open('data.txt',mode='w') as data:
-                data.write(f"{self.high_score}")
+        try:
+            self.write(f"Score: {self.score} High Sore {self.high_score}",align=ALIGMENT,font=FONT)
+        except AttributeError:
+            pass
         
+    def reset(self):
+        try:
+            if self.score > self.high_score:
+                self.high_score = self.score
+                with open('data.txt',mode='w') as data:
+                    data.write(f"{self.high_score}")
+        except AttributeError:
+            pass
         self.score = 0
         self.update_scoreboard()
 

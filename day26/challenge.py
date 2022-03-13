@@ -1,4 +1,3 @@
-from unicodedata import name
 
 
 names = ['carolina','alberto','raul','ana','amtonio','sofia']

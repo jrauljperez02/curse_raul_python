@@ -1,8 +1,7 @@
 import requests
-import smtplib
 from time import *
 from datetime import datetime
-
+import pywhatkit
 
 MY_LAT = 19.432608
 MY_LONG = -99.133209
@@ -45,11 +44,4 @@ while True:
     sleep(60)
     if is_iss_overhead() and is_night():
         
-        connection = smtplib.SMTP('smtp.@gmail.com')
-        connection.starttls()
-        connection.login(MY_EMAIL,MY_PASSWORD)
-        connection.sendmail(
-            from_addr=MY_EMAIL,
-            to_addrs=MY_EMAIL,
-            msg=f'Subject:Look up\n\nThe ISS is above you in the sky'
-        )
+        pywwhatkit.sendwhatmsg('+522461034307','Look above you, The ISS is above you',2,10)

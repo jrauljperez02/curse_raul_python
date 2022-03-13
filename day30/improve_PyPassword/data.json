@@ -1,18 +1,14 @@
 {
-    "Facebook": {
-        "email": "raul_jimenez_71@outlook.es",
-        "password": "2FuI+Gf$2Av"
-    },
-    "Netflix": {
-        "email": "raul_jimenez_71@outlook.es",
-        "password": "1492896"
-    },
-    "Disney+": {
-        "email": "raul_jimenez_71@outlook.es",
-        "password": "lMBn0uX*yvk5*!8G+"
+    "Social Network": {
+        "email": "someome@gamil..es",
+        "password": "passwword"
     },
     "Amazon": {
         "email": "raul_jimenez_71@outlook.es",
-        "password": "3HjL$5h5!7YMmc$"
+        "password": "sPH1#X1H$74Fot"
+    },
+    "Facebook": {
+        "email": "raul_jimenez_71@outlook.es",
+        "password": "Password123"
     }
 }
