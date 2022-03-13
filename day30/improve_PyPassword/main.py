@@ -3,7 +3,6 @@ from tkinter import *
 from tkinter import messagebox
 from random import randint,choice,shuffle
 from turtle import tilt, title
-import pyperclip
 import json
 
 
@@ -26,7 +25,6 @@ def generate_password():
 
     password = ''.join(password_list)
     password_entry.insert(0, password)
-    pyperclip.copy(password)
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
